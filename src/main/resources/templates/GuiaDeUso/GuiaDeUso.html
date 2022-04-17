@@ -1,56 +1,37 @@
 <html>
     <head>
-        <title>ReservaTrip • Guia de uso</title>
+        <title th:text="#{GuiaDeUso.Titulo}" >ReservaTrip • Guia de uso</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
     </head>
     <body>
-         
-        <header class="header">
 
-            <nav class="nav ">
-                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-                <ul class="menu">
-                    <li class="item"><a class="link fuente" th:href="@{/}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                    <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" >Catalogo</a></li>                    
-                    <li class="Separador"></li>
-                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-                </ul>
-            </nav>
-        
-        </header> 
+        <header th:replace="layout/plantilla :: headerIndex"></header> 
+
         <br>
-        <h1 class="GuiaDeUsoT">Paso a paso para reservar</h1>
+        <h1 class="GuiaDeUsoT" th:text="#{GuiaDeUso.Paso_a_Paso}">Paso a paso para reservar</h1>
         <br><br><br><br><br><br><br><br>
-        <h1 class="GuiaDeUsoT">Preguntas frecuentes</h1>
+        <h1 class="GuiaDeUsoT" th:text="#{GuiaDeUso.PF}">Preguntas frecuentes</h1>
         <br><br>
-        <h3 class="GuiaDeUsoP">¿Tienen redes sociales?</h3> <br>
-        <p class="GuiaDeUsoR">Si, reserva trip cuenta con <a class="GuiaDeUsoL" href="https://www.instagram.com/reservatrip_cr/">instagram,</a> <a class="GuiaDeUsoL"  href="https://twitter.com/ReservaTrip">twitter</a> y <a class="GuiaDeUsoL" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA">youtube</a></p>
+        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P1}" >¿Tienen redes sociales?</h3> <br>
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R1}">Si, reserva trip cuenta con <a class="GuiaDeUsoL" href="https://www.instagram.com/reservatrip_cr/">instagram,</a> <a class="GuiaDeUsoL"  href="https://twitter.com/ReservaTrip">twitter</a> y <a class="GuiaDeUsoL" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA">youtube</a></p>
         <br><br>
-        <h3 class="GuiaDeUsoP">¿La reservación se puede modificar o eliminar?</h3> <br>
-        <p class="GuiaDeUsoR">Si, pero primero se debe hacer una reservación para que se habilite la opción de modificar o eliminar</p>
-         <br><br>
-        <h3 class="GuiaDeUsoP">¿Puedo realizar reservaciones estando fuera del país?</h3> <br>
-        <p class="GuiaDeUsoR">Si, La pagina está habilitada para que puedas hacer tu reservación desde cualquier parte del mundo</p>
-         <br><br>
-        <h3 class="GuiaDeUsoP">¿Cuentan con hoteles en todo el territorio nacional?</h3> <br>
-        <p class="GuiaDeUsoR">Si, Contamos con un amplio catálogo en el que puedes encontrar hospedaje en cualquiera de las siete provincias.</p>
-         <br><br>
-         <h3 class="GuiaDeUsoP">¿Cómo eligen los hoteles que hay en la pagina?</h3> <br>
-        <p class="GuiaDeUsoR">Elegimos los hoteles mejores valorados en cada zona del país</p>
-         
-         
-         
-        
+        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P2}">¿La reservación se puede modificar o eliminar?</h3> <br>
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R2}">Si, pero primero se debe hacer una reservación para que se habilite la opción de modificar o eliminar</p>
+        <br><br>
+        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P3}">¿Puedo realizar reservaciones estando fuera del país?</h3> <br>
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R3}">Si, La pagina está habilitada para que puedas hacer tu reservación desde cualquier parte del mundo</p>
+        <br><br>
+        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P4}">¿Cuentan con hoteles en todo el territorio nacional?</h3> <br>
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R4}">Si, Contamos con un amplio catálogo en el que puedes encontrar hospedaje en cualquiera de las siete provincias.</p>
+        <br><br>
+        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P5}">¿Cómo eligen los hoteles que hay en la pagina?</h3> <br>
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R5}">Elegimos los hoteles mejores valorados en cada zona del país</p>
+
         <br><br><br><br>
-        <footer class="footer">
-            <p>Para mas informacion llama al 2266-0632</p>
-        </footer>
+
+        <footer th:replace="layout/plantilla :: footer"></footer>
+
     </body>
-</html>

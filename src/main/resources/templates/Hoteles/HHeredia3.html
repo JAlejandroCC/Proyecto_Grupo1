@@ -8,33 +8,18 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
     </head>
 
-
-    <aside class="barralateral">
-        <br><br><br><br><br>
-        <h2>Otras provincias</h2>
-        <br><br>
-        <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
-        <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
-        <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
-        <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
-        <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
-        <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
-
-    </aside>
-
+    <aside th:replace="layout/plantilla :: asideHeredia"></aside> 
 
     <body class="body2">
-
-
-
-    <center>
-
+        
+        <center>
+        
         <h1>Finca Rosa Blanca Coffee Farm and Inn</h1>
-
+        
         <br>
 
         <section>
-
+            
             <video width="900" height="600" controls autoplay muted>
                 <source src="Imagenes/videos/4Heredia3.mp4" type="video/mp4">
                 Your browser does not support the <code>video</code> tag.
@@ -42,56 +27,39 @@
             
             <br><br><br>
             
-            <p class="descripHotel">La Finca Rosa Blanca Coffee Farm and Inn se encuentra en Heredia, a 10 km del aeropuerto <br>
-                internacional Juan Santamaría, y ofrece alojamiento con restaurante de granja a mesa,<br>
-                piscina de borde infinito</p>
-
+            <p class="descripHotel" th:text="#{HHeredia3.descripcion1}">La Finca Rosa Blanca Coffee Farm and Inn se encuentra en Heredia, a 10 km del aeropuerto </p>
+            <p class="descripHotel" th:text="#{HHeredia3.descripcion2}">internacional Juan Santamaría, y ofrece alojamiento con restaurante de granja a mesa,</p>
+            <p class="descripHotel" th:text="#{HHeredia3.descripcion3}">piscina de borde infinito</p>
+            
             <br><br>
-
-            <p>Precio por noche: CRC 212.326</p>
-
+            
+            <p th:text="#{HHeredia3.PN}">Precio por noche: CRC 212.326</p>
+            
             <br><br>
-
-            <a class="descripHotel" href="https://www.booking.com/hotel/cr/finca-rosa-blanca.es.html?aid=306396;label=heredia-JQPecNr4ONSJPAZ4nesgQwS553300048015%3Apl%3Ata%3Ap110%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-4193395299%3Alp1003673%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YdnZzv7u3SiOco5fpqS0M1M;sid=39cb49e29eeed4a1bf9ac1399a0a166d">Pagina del hotel</a>
-
+            
+            <a class="descripHotel" href="https://www.booking.com/hotel/cr/finca-rosa-blanca.es.html?aid=306396;label=heredia-JQPecNr4ONSJPAZ4nesgQwS553300048015%3Apl%3Ata%3Ap110%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-4193395299%3Alp1003673%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YdnZzv7u3SiOco5fpqS0M1M;sid=39cb49e29eeed4a1bf9ac1399a0a166d" th:text="#{H.PH}">Pagina del hotel</a>
+           
             <br><br>
-
+            
             <form >
-                <input class="boton" type="submit" name="guardar" value="Reservar"/>
+            <input class="boton" type="submit" name="guardar" value="Reservar"/>
             </form>
-
+            
             <br><br><br><br><br><br>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.654495337378!2d-84.15398188480125!3d10.045342875007163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e35c2857ed79%3A0x51251a255b33dbb6!2sFinca%20Rosa%20Blanca!5e0!3m2!1ses-419!2scr!4v1649117388402!5m2!1ses-419!2scr"
-                    width="700" height="550" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p class="descripHotel">¡Ubicanos!</p>
+            
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.654495337378!2d-84.15398188480125!3d10.045342875007163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e35c2857ed79%3A0x51251a255b33dbb6!2sFinca%20Rosa%20Blanca!5e0!3m2!1ses-419!2scr!4v1649117388402!5m2!1ses-419!2scr"
+                   width="700" height="550" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p class="descripHotel" th:text="#{H.Ubicanos}">¡Ubicanos!</p>
         </section>
 
 
     </center>
+
+    <header th:replace="layout/plantilla :: headerHerediaHotel"></header> 
     
-    <header class="header">
-
-        <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/Heredia}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{/Catalogo}" >Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-
     <br><br><br><br>
-    <footer class="footer">
-        <p>Para mas informacion llama al 2266-0632</p>
-    </footer>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    
 </body>
 </html>

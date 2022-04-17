@@ -8,28 +8,11 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
     </head>
 
-
-    <aside class="barralateral">
-        <br><br><br><br><br>
-        <h2>Otras provincias</h2>
-        <br><br>
-        <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
-        <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
-        <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
-        <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
-        <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
-        <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
-
-    </aside>
-
+    <aside th:replace="layout/plantilla :: asideGuanacaste"></aside> 
 
     <body class="body2">
-
-  
-
-    </center>
-
-    <center>
+        
+        <center>
         
         <h1>Hotel Samara Palm Lodge </h1>
         
@@ -37,24 +20,23 @@
 
         <section>
             
-            
-             <video width="900" height="600" controls autoplay muted>
+            <video width="900" height="600" controls autoplay muted>
                 <source src="Imagenes/videos/6Guanacaste1.mp4" type="video/mp4">
                 Your browser does not support the <code>video</code> tag.
             </video>
             
             <br><br><br>
             
-            <p class="descripHotel">Este alojamiento está a 5 minutos a pie de la playa. El Samara Palm Lodge está situado en el<br>
-                límite de la pequeña localidad de Playa Sámara. La playa y el centro de Sámara están a 5 minutos.</p>
+            <p class="descripHotel" th:text="#{HGuanacaste1.descripcion1}">Este alojamiento está a 5 minutos a pie de la playa. El Samara Palm Lodge está situado en el</p>
+            <p class="descripHotel" th:text="#{HGuanacaste1.descripcion2}">límite de la pequeña localidad de Playa Sámara. La playa y el centro de Sámara están a 5 minutos.</p>
             
             <br><br>
             
-            <p>Precio por noche: CRC 31.499</p>
+            <p th:text="#{HGuanacaste1.PN}">Precio por noche: CRC 31.499</p>
             
             <br><br>
             
-            <a class="descripHotel" href="https://www.booking.com/hotel/cr/samara-palm-lodge-playa-samara.es.html?aid=356980;label=gog235jc-1DCAYoM0IKZ3VhbmFjYXN0ZUgKWANoM4gBAZgBCrgBGMgBDNgBA-gBAfgBAogCAagCBLgC_c7IkQbAAgHSAiRkZTE1MjhmMi03MzA2LTRiMGItYTkxZC0yOTEyMGUxMTI5NDTYAgTgAgE;sid=39cb49e29eeed4a1bf9ac1399a0a166d">Pagina del hotel</a>
+            <a class="descripHotel" href="https://www.booking.com/hotel/cr/samara-palm-lodge-playa-samara.es.html?aid=356980;label=gog235jc-1DCAYoM0IKZ3VhbmFjYXN0ZUgKWANoM4gBAZgBCrgBGMgBDNgBA-gBAfgBAogCAagCBLgC_c7IkQbAAgHSAiRkZTE1MjhmMi03MzA2LTRiMGItYTkxZC0yOTEyMGUxMTI5NDTYAgTgAgE;sid=39cb49e29eeed4a1bf9ac1399a0a166d" th:text="#{H.PH}">Pagina del hotel</a>
            
             <br><br>
             
@@ -66,35 +48,19 @@
             
            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.611860173603!2d-85.53474388480176!3d9.882894077750311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9faa0fd3d2c08d%3A0xa873d703ae572ad9!2sSamara%20Palm%20Lodge!5e0!3m2!1ses-419!2scr!4v1649117857499!5m2!1ses-419!2scr" 
                    width="700" height="550" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p class="descripHotel">¡Ubicanos!</p>
+                    <p class="descripHotel" th:text="#{H.Ubicanos}">¡Ubicanos!</p>
         </section>
+
+  
+
     </center>
 
-        <header class="header">
-
-        <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/Guanacaste}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{/Catalogo}" >Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-
-
+    <header th:replace="layout/plantilla :: headerGuanacasteHotel"></header> 
 
     <br><br><br><br>
-    <footer class="footer">
-        <p>Para mas informacion llama al 2266-0632</p>
-    </footer>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    
 </body>
 </html>
 

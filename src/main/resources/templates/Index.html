@@ -2,64 +2,46 @@
 
 <html>
     <head>
-        <title>ReservaTrip • Inicio</title>
+        <title th:text="#{index.Titulo}">ReservaTrip • Inicio</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
     </head>
 
-    <header class="header">
+    <header th:replace="layout/plantilla :: headerIndex"></header> 
 
-        <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" >Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
-        
-    </header>
-    
-    
     <body>
-    <br><br>
-    <center>   <h2>ReservaTrip</h2>   </center>
-    <br>
+        <br><br>
+    <center>   <h2 class="Titulo">ReservaTrip</h2>   </center>
     
-    <p class="descripcion">ReservaTrip es una pagina en la cual vas a poder explorar los mejores hoteles de Costa Rica divididos en las 7 provincias del país,<br>
-        cuando encuentres el hotel ideal podrás crear una reservación la cual posteriormente vas a poder modificar o eliminar</p>
+    <br><p class="descripcion" th:text="#{index.descripcion}">ReservaTrip es una pagina en la cual vas a poder explorar los mejores hoteles de Costa Rica divididos en las 7 provincias del país,</p>
+    <p class="descripcion" th:text="#{index.descripcion2}">cuando encuentres el hotel ideal podrás crear una reservación la cual posteriormente vas a poder modificar o eliminar</p>
     <br><br>
 
-    
+
     <center>
         <article>
             <iframe width="800" height="400" src="https://www.youtube.com/embed/VpMHnUYxXVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <footer class="pieDeVideo">Una nueva manera de reservar</footer>
+            <footer class="pieDeVideo" th:text="#{index.pie}">Una nueva manera de reservar</footer>
         </article>
     </center>
-    
-    
-    <br><br><br><br><br><br>
-    
-    
-     <figure class="image fade">
-         <h3>Fotos de los hoteles mas visitados</h3>
-         <img src="Imagenes/Hoteles mas visitados.png" alt=""/>
-         <figcaption><a th:href="@{Catalogo}" class="figcap">Ver mas hoteles</a></figcaption>
-        </figure>
 
-    
+
+    <br><br><br><br><br><br>
+
+
+    <figure class="image fade">
+        <h3 th:text="#{image.fade}">Fotos de los hoteles mas visitados</h3>
+        <img src="Imagenes/Hoteles mas visitados.png" alt=""/>
+        <figcaption><a th:href="@{Catalogo}" class="figcap" th:text="#{image.figcaption}">Ver mas hoteles</a></figcaption>
+    </figure>
+
+
     <br><br><br><br>
-    <footer class="footer">
-        <p>Para mas informacion llama al 2266-0632</p>
-    </footer>
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
 
 </body>
 </html>
+

@@ -8,25 +8,11 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
     </head>
 
-
-    <aside class="barralateral">
-        <br><br><br><br><br>
-        <h2>Otras provincias</h2>
-        <br><br>
-        <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
-        <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
-        <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
-        <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
-        <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
-        <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
-    </aside>
-
+    <aside th:replace="layout/plantilla :: asidePuntarenas"></aside> 
 
     <body class="body2">
-
-   
-
-    <center>
+        
+         <center>
         
         <h1>Hotel Yadran Beach Resort</h1>
         
@@ -34,7 +20,6 @@
 
         <section>
             
-
             <video width="900" height="600" controls autoplay muted>
                 <source src="Imagenes/videos/5Puntarenas1.mp4" type="video/mp4">
                 Your browser does not support the <code>video</code> tag.
@@ -42,16 +27,16 @@
             
             <br><br><br>
             
-            <p class="descripHotel">El Hotel Yadran Beach Resort se encuentra en Puntarenas, a 1,3 km del parque marino del <br>
-                Pacífico, y ofrece restaurante, aparcamiento privado gratuito, piscina al aire libre y bar.</p>
+            <p class="descripHotel" th:text="#{HPuntarenas1.descripcion1}">El Hotel Yadran Beach Resort se encuentra en Puntarenas, a 1,3 km del parque marino del </p>
+            <p class="descripHotel" th:text="#{HPuntarenas1.descripcion2}">Pacífico, y ofrece restaurante, aparcamiento privado gratuito, piscina al aire libre y bar.</p>
             
             <br><br>
             
-            <p>Precio por noche: CRC 44.921</p>
+            <p th:text="#{HPuntarenas1.PN}">Precio por noche: CRC 44.921</p>
             
             <br><br>
             
-            <a class="descripHotel" href="https://www.booking.com/hotel/cr/yadran-beach-resort.es.html?aid=306396;label=puntarenas-gDFTSYcmeGq0SgDW_pGRxQS199769431676%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-4193919039%3Alp1003673%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YdnZzv7u3SiOco5fpqS0M1M;sid=39cb49e29eeed4a1bf9ac1399a0a166d">Pagina del hotel</a>
+            <a class="descripHotel" href="https://www.booking.com/hotel/cr/yadran-beach-resort.es.html?aid=306396;label=puntarenas-gDFTSYcmeGq0SgDW_pGRxQS199769431676%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-4193919039%3Alp1003673%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YdnZzv7u3SiOco5fpqS0M1M;sid=39cb49e29eeed4a1bf9ac1399a0a166d"th:text="#{H.PH}">Pagina del hotel</a>
            
             <br><br>
             
@@ -63,34 +48,17 @@
             
            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.4981831970604!2d-84.8515800848015!3d9.975643276189249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa02ec9b5d73d77%3A0x6e0935c9aa625d73!2sYadran%20Beach%20Resort%20%26%20Casino!5e0!3m2!1ses-419!2scr!4v1649117447350!5m2!1ses-419!2scr"
                    width="700" height="550" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p class="descripHotel">¡Ubicanos!</p>
+                    <p class="descripHotel" th:text="#{H.Ubicanos}">¡Ubicanos!</p>
         </section>
 
 
     </center>
-    
-     <header class="header">
 
-        <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/Puntarenas}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{/Catalogo}" >Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
-
-    </header>
-
+   <header th:replace="layout/plantilla :: headerPuntarenasHotel"></header> 
 
     <br><br><br><br>
-    <footer class="footer">
-        <p>Para mas informacion llama al 2266-0632</p>
-    </footer>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    
 </body>
 </html>

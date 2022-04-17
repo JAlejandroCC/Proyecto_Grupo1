@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">  
+        <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
+        <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
+    </head>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <body>
+        
+        <header th:fragment="headerIndex" class="header">
+            <nav class="nav ">
+            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+            <ul class="menu">
+                <li class="item"><a class="link fuente" th:href="@{/}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                    
+                <li class="Separador"></li>
+                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </nav>
+        </header>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <header th:fragment="headerSanJose" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                   <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside th:fragment="asideSanJose" class="barralateral">
+            <br><br><br><br><br>
+            <h2 th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
+            <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
+            <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
+            <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
+            <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
+        </aside>
+
+
+        <header th:fragment="headerSanJoseHotel" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/SanJose}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+        <aside th:fragment="asideAlajuela" class="barralateral">
+            <br><br><br><br><br>
+            <h2 th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
+            <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
+            <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
+            <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
+            <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
+        </aside>
+
+        <header th:fragment="headerAlajuelaHotel" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/Alajuela}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                   <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <aside th:fragment="asideCartago" class="barralateral">
+            <br><br><br><br><br>
+            <h2 th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
+            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
+            <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
+            <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
+            <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
+        </aside>
+
+        <header th:fragment="headerCartagoHotel" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/Cartago}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <aside th:fragment="asideHeredia" class="barralateral">
+            <br><br><br><br><br>
+            <h2 th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
+            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
+            <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
+            <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
+            <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
+        </aside>
+
+        <header th:fragment="headerHerediaHotel" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/Heredia}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <aside th:fragment="asidePuntarenas" class="barralateral">
+            <br><br><br><br><br>
+            <h2 th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
+            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
+            <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
+            <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
+            <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
+        </aside>
+
+        <header th:fragment="headerPuntarenasHotel" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/Puntarenas}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <aside th:fragment="asideGuanacaste" class="barralateral">
+            <br><br><br><br><br>
+            <h2 th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
+            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
+            <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
+            <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
+            <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
+        </aside>
+
+        <header th:fragment="headerGuanacasteHotel" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/Guanacaste}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <aside th:fragment="asideLimon" class="barralateral"><br><br><br><br><br>
+            <h2 th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
+            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
+            <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
+            <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
+            <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3></a>
+        </aside>
+
+        <header th:fragment="headerLimonHotel" class="header">
+            <nav class="nav ">
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/Limon}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        
+        <footer th:fragment="footer" class="footer">
+        <p>[[#{footer.contenido}]]    
+             <a class="lenguaje" th:href="@{/(lang=es)}">ES</a> |
+            <a class="lenguaje" th:href="@{/(lang=en)}">EN</a></p>
+    </footer>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    </body>
+</html>

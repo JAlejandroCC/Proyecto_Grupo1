@@ -8,26 +8,11 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
     </head>
 
-
-    <aside class="barralateral">
-        <br><br><br><br><br>
-        <h2>Otras provincias</h2>
-        <br><br>
-        <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
-        <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
-        <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
-        <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
-        <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
-        <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
-
-    </aside>
-
+    <aside th:replace="layout/plantilla :: asideCartago"></aside> 
 
     <body class="body2">
-
-   
-
-    <center>
+        
+        <center>
         
         <h1>Cabañas y Mirador Secret Garden CR</h1>
         
@@ -35,7 +20,6 @@
 
         <section>
             
-
             <video width="900" height="600" controls autoplay muted>
                 <source src="Imagenes/videos/3Cartago3.mp4" type="video/mp4">
                 Your browser does not support the <code>video</code> tag.
@@ -43,19 +27,19 @@
             
             <br><br><br>
             
-            <p class="descripHotel">Las Cabañas y Mirador Secret Garden CR se encuentran en Cartago, a 6 km del volcán Irazú<br>
-                y a 10 km del jardín botánico de Lankester, y ofrecen alojamiento con jardín, WiFi gratuita en<br>
-                todas las instalaciones y aparcamiento privado gratuito. Ofrece habitaciones familiares y terraza.<br>
-                El establecimiento cuenta con cocina compartida, salas de reuniones, mostrador de información<br>
-                turística y servicio de limpieza en seco. </p>
+            <p class="descripHotel" th:text="#{HCartago3.descripcion1}">Las Cabañas y Mirador Secret Garden CR se encuentran en Cartago, a 6 km del volcán Irazú </p>
+            <p class="descripHotel" th:text="#{HCartago3.descripcion2}">y a 10 km del jardín botánico de Lankester, y ofrecen alojamiento con jardín, WiFi gratuita en </p>
+            <p class="descripHotel" th:text="#{HCartago3.descripcion3}">todas las instalaciones y aparcamiento privado gratuito. Ofrece habitaciones familiares y terraza. </p>
+            <p class="descripHotel" th:text="#{HCartago3.descripcion4}">El establecimiento cuenta con cocina compartida, salas de reuniones, mostrador de información </p>
+            <p class="descripHotel" th:text="#{HCartago3.descripcion5}">turística y servicio de limpieza en seco. </p>
             
             <br><br>
             
-            <p>Precio por noche: CRC 75.211</p>
+            <p th:text="#{HCartago3.PN}">>Precio por noche: CRC 75.211</p>
             
             <br><br>
             
-            <a class="descripHotel" href="https://www.booking.com/hotel/cr/cabanas-y-mirador-secret-garden-cr.es.html?aid=335794;label=cartago-61EjhZqPqKCjIvgnouSCcwS388385263149%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-1110454565467%3Akwd-3519445740%3Alp1003673%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pIl_maCbfiNw;sid=39cb49e29eeed4a1bf9ac1399a0a166d">Pagina del hotel</a>
+            <a class="descripHotel" href="https://www.booking.com/hotel/cr/cabanas-y-mirador-secret-garden-cr.es.html?aid=335794;label=cartago-61EjhZqPqKCjIvgnouSCcwS388385263149%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-1110454565467%3Akwd-3519445740%3Alp1003673%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pIl_maCbfiNw;sid=39cb49e29eeed4a1bf9ac1399a0a166d" th:text="#{H.PH}">Pagina del hotel</a>
            
             <br><br>
             
@@ -67,30 +51,13 @@
             
            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.990137237806!2d-83.87619758480157!3d9.93477807687871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df7c7a2e552f%3A0xb18ecb6c2888b7aa!2sCaba%C3%B1as%20y%20Mirador%20Secret%20Garden%20CR!5e0!3m2!1ses-419!2scr!4v1649116993926!5m2!1ses-419!2scr"
                    width="700" height="550" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p class="descripHotel">¡Ubicanos!</p>
+                    <p class="descripHotel" th:text="#{H.Ubicanos}">¡Ubicanos!</p>
         </section>
 
 
     </center>
-    
-    <header class="header">
 
-        <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/Cartago}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{/Catalogo}" >Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
-
-    </header>
-
+   <header th:replace="layout/plantilla :: headerCartagoHotel"></header> 
 
     <br><br><br><br>
     <footer class="footer">

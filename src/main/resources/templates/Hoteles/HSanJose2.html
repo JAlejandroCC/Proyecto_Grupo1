@@ -7,27 +7,12 @@
         <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
     </head>
-
-
-    <aside class="barralateral">
-        <br><br><br><br><br>
-        <h2>Otras provincias</h2>
-        <br><br>
-        <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
-        <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
-        <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
-        <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
-        <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
-        <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
-
-    </aside>
-
+    
+    <aside th:replace="layout/plantilla :: asideSanJose"></aside> 
 
     <body class="body2">
-
-   
-
-    <center>
+        
+         <center>
         
         <h1>Radisson Hotel San José</h1>
         
@@ -35,23 +20,23 @@
 
         <section>
             
- <video width="900" height="600" controls autoplay muted>
+            <video width="900" height="600" controls autoplay muted>
                 <source src="Imagenes/videos/1SanJose2.mp4" type="video/mp4">
                 Your browser does not support the <code>video</code> tag.
             </video>
             
             <br><br><br>
             
-            <p class="descripHotel">Este hotel elegante alberga una piscina al aire libre, una piscina cubierta climatizada y un centro<br> 
-                de conferencias. Todas las habitaciones son amplias y tienen WiFi gratuita.</p>
+            <p class="descripHotel" th:text="#{HSanJose2.descripcion1}">Este hotel elegante alberga una piscina al aire libre, una piscina cubierta climatizada y un centro</p>
+            <p class="descripHotel" th:text="#{HSanJose2.descripcion2}">de conferencias. Todas las habitaciones son amplias y tienen WiFi gratuita.</p>
             
             <br><br>
             
-            <p>Precio por noche: CRC 57.276</p>
+            <p th:text="#{HSanJose2.PN}">Precio por noche: CRC 57.276</p>
             
             <br><br>
             
-            <a class="descripHotel" href="https://www.radissonhotelsamericas.com/en-us/hotels/radisson-san-jose-costa-rica?facilitatorId=GOOGLEAMERICAS&cid=a:ps+b:ggl+c:amer+e:rad+d:latam+f:en-US+g:hoh:CRSANJOS&gclid=CjwKCAjwlcaRBhBYEiwAK341jVF1yWEF8waQcL-35KktYn-K_kGq_L3pkvCSEL-mT0hv4gHXgKocNxoCKJ8QAvD_BwE">Pagina del hotel</a>
+            <a class="descripHotel" href="https://www.radissonhotelsamericas.com/en-us/hotels/radisson-san-jose-costa-rica?facilitatorId=GOOGLEAMERICAS&cid=a:ps+b:ggl+c:amer+e:rad+d:latam+f:en-US+g:hoh:CRSANJOS&gclid=CjwKCAjwlcaRBhBYEiwAK341jVF1yWEF8waQcL-35KktYn-K_kGq_L3pkvCSEL-mT0hv4gHXgKocNxoCKJ8QAvD_BwE" th:text="#{H.PH}">Pagina del hotel</a>
             
             <br><br>
             
@@ -63,35 +48,18 @@
             
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.883198899606!2d-84.07921678480159!3d9.943675276728868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e49edef4b3eb%3A0xc8956f3f7bdc3793!2sRadisson%20San%20Jose-Costa%20Rica!5e0!3m2!1ses-419!2scr!4v1649115464697!5m2!1ses-419!2scr" 
                     width="700" height="550" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p class="descripHotel">¡Ubicanos!</p>
+                    <p class="descripHotel" th:text="#{H.Ubicanos}">¡Ubicanos!</p>
         </section>
 
-       
+
     </center>
+
+   <header th:replace="layout/plantilla :: headerSanJoseHotel"></header> 
     
-     <header class="header">
-
-        <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/SanJose}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{/Catalogo}" >Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-
     <br><br><br><br>
-    <footer class="footer">
-        <p>Para mas informacion llama al 2266-0632</p>
-    </footer>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    
 </body>
 </html>
 

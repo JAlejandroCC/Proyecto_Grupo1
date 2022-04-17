@@ -8,26 +8,11 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
     </head>
 
-
-    <aside class="barralateral">
-        <br><br><br><br><br>
-        <h2>Otras provincias</h2>
-        <br><br>
-        <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
-        <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
-        <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
-        <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
-        <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
-        <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
-
-    </aside>
-
-
+    <aside th:replace="layout/plantilla :: asideSanJose"></aside> 
+    
     <body class="body2">
-
         
-
-   <center>
+        <center>
         
         <h1>Wyndham Garden San José Escazú</h1>
         
@@ -35,7 +20,6 @@
 
         <section>
             
-
             <video width="900" height="600" controls autoplay muted>
                 <source src="Imagenes/videos/1SanJose3.mp4" type="video/mp4">
                 Your browser does not support the <code>video</code> tag.
@@ -43,17 +27,17 @@
             
             <br><br><br>
             
-            <p class="descripHotel">Este hotel se encuentra a 5 minutos en coche del parque metropolitano La Sabana y del centro<br>
-                comercial Multiplaza y dispone de piscina cubierta, terraza, bañera de hidromasaje y WiFi de <br>
-                alta velocidad.</p>
+            <p class="descripHotel" th:text="#{HSanJose3.descripcion1}">Este hotel se encuentra a 5 minutos en coche del parque metropolitano La Sabana y del centro</p>
+            <p class="descripHotel" th:text="#{HSanJose3.descripcion2}">comercial Multiplaza y dispone de piscina cubierta, terraza, bañera de hidromasaje y WiFi de</p>
+            <p class="descripHotel" th:text="#{HSanJose3.descripcion3}">alta velocidad.</p>
             
             <br><br>
             
-            <p>Precio por noche: CRC 61.712</p>
+            <p th:text="#{HSanJose3.PN}">Precio por noche: CRC 61.712</p>
             
             <br><br>
             
-            <a class="descripHotel" href="https://www.guestreservations.com/wyndham-garden-san-jose-silicon-valley/booking?gclid=CjwKCAjwlcaRBhBYEiwAK341jZk7CZpXxjN-MBq3dcjno5CAD5NBEdWwmlWLFi1GNRftyQD_kcJRrRoCFkAQAvD_BwE">Pagina del hotel</a>
+            <a class="descripHotel" href="https://www.guestreservations.com/wyndham-garden-san-jose-silicon-valley/booking?gclid=CjwKCAjwlcaRBhBYEiwAK341jZk7CZpXxjN-MBq3dcjno5CAD5NBEdWwmlWLFi1GNRftyQD_kcJRrRoCFkAQAvD_BwE" th:text="#{H.PH}">Pagina del hotel</a>
             
             <br><br>
             
@@ -65,34 +49,17 @@
             
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.968734801366!2d-84.1329641848016!3d9.93655937684872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fc82575ee9d5%3A0xfee5053187aca4ee!2sWyndham%20Garden%20Escaz%C3%BA!5e0!3m2!1ses-419!2scr!4v1649115720017!5m2!1ses-419!2scr"
                     width="700" height="550" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p class="descripHotel">¡Ubicanos!</p>
+                    <p class="descripHotel" th:text="#{H.Ubicanos}">¡Ubicanos!</p>
         </section>
 
 
     </center>
-    
-     <header class="header">
 
-        <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/SanJose}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{/Catalogo}" >Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
-
-    </header>
-
+        <header th:replace="layout/plantilla :: headerSanJoseHotel"></header> 
 
     <br><br><br><br>
-    <footer class="footer">
-        <p>Para mas informacion llama al 2266-0632</p>
-    </footer>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    
 </body>
 </html>

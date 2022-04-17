@@ -1,7 +1,7 @@
 <html>
     
     <head>
-        <title>ReservaTrip • Catalogo</title>
+        <title th:text="#{Catalogo.Titulo}">ReservaTrip • Catalogo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
@@ -10,33 +10,21 @@
     </head>
     
     <body>
-        <header class="header">
-
-            <nav class="nav ">
-                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-                <ul class="menu">
-                    <li class="item"><a class="link fuente" th:href="@{/}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}">Guia de Uso</a></li>
-                    <li class="item"><a class="link fuente" >Gestionar Reservaciones</a></li>                                       
-                    <li class="item"><a class="link fuente" th:href="@{/Catalogo}">Catalogo</a></li>                    
-                    <li class="Separador"></li>
-                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-                </ul>
-            </nav>
-            
-        </header>
+        
+        <header th:replace="layout/plantilla :: headerIndex"></header> 
+        
         <br><br>
         
         <article>
             <center> 
                 
                 <a th:href="@{/SanJose}"> <img src="Imagenes/1SanJose.jpeg" alt=""/></a>
-                <br><br><footer class="descripProvinia">La capital del país que se encuentra rodeada de volcanes y verdes cerros,<br>
-                    lo cual expone la riqueza natural que posee Costa Rica, esta provincia con su<br>
-                    diversa arquitectura cuenta con puntos de interés como esculturas y colores<br>
-                    que cuentan la historia de la provincia. Los principales atractivos de la <br>provincia son el teatro nacional y el estadio nacional.</footer>
+                <br><br><footer class="descripProvinia"><p th:text="#{Catalogo.SJ1}">La capital del país que se encuentra rodeada de volcanes y verdes cerros,</p>
+                                                        <p th:text="#{Catalogo.SJ2}">lo cual expone la riqueza natural que posee Costa Rica, esta provincia con su</p>
+                                                        <p th:text="#{Catalogo.SJ3}">diversa arquitectura cuenta con puntos de interés como esculturas y colores</p>
+                                                        <p th:text="#{Catalogo.SJ4}">que cuentan la historia de la provincia. Los principales atractivos de la </p>
+                                                        <p th:text="#{Catalogo.SJ5}">provincia son el teatro nacional y el estadio nacional.</p>
+                </footer>
                 
             </center>
         </article>
@@ -49,10 +37,12 @@
             <center>
                 
                 <a th:href="@{/Alajuela}"> <img src="Imagenes/2Alajuela.jpeg" alt=""/></a>
-                <br><br><footer class="descripProvinia">Esta provincia es la primera que los turistas conocen al llegar al territorio<br>
-                    costarricense, esto se debe a que en Alajuela se encuentra el aeropuerto<br> 
-                    Juan Santamaria, el cual es el aeropuerto principal del país. En este territorio<br>
-                    se encuentran los dos volcanes más impresionantes los culés son:<br> Volcán Arenal y Volcán Poas.</footer>
+                <br><br><footer class="descripProvinia"> <p th:text="#{Catalogo.A1}">Esta provincia es la primera que los turistas conocen al llegar al territorio</p>
+                                                         <p th:text="#{Catalogo.A2}">costarricense, esto se debe a que en Alajuela se encuentra el aeropuerto</p> 
+                                                         <p th:text="#{Catalogo.A3}">Juan Santamaria, el cual es el aeropuerto principal del país. En este territorio</p>
+                                                         <p th:text="#{Catalogo.A4}">se encuentran los dos volcanes más impresionantes los culés son:</p>
+                                                         <p th:text="#{Catalogo.A5}">Volcán Arenal y Volcán Poas.</p>
+                </footer>
                 
             </center>
         </article>
@@ -65,12 +55,13 @@
             <center>
                 
                <a th:href="@{/Cartago}"> <img src="Imagenes/3Cartago.jpeg" alt=""/></a>
-               <br><br><footer class="descripProvinia">Mejor conocida como la vieja metrópoli, Cartago es la provincia más <br>
-                   colonial del país y un ejemplo que respalda esto es el templo de Ororsi<br> 
-                   el cual se considera histórico y la Basílica de los ángeles que es un símbolo <br>
-                   para los católicos. Con un clima húmedo dentro de un sistema montañoso <br>
-                   en donde se sitúan los volcanes Irazú y Turrialba, hacen que Cartago sea<br>
-                   una excelente provincia para vacacionar</footer>
+               <br><br><footer class="descripProvinia">     <p th:text="#{Catalogo.C1}"> Mejor conocida como la vieja metrópoli, Cartago es la provincia más </p>
+                                                            <p th:text="#{Catalogo.C2}">colonial del país y un ejemplo que respalda esto es el templo de Ororsi</p> 
+                                                            <p th:text="#{Catalogo.C3}">el cual se considera histórico y la Basílica de los ángeles que es un símbolo</p>
+                                                            <p th:text="#{Catalogo.C4}">para los católicos. Con un clima húmedo dentro de un sistema montañoso</p>
+                                                            <p th:text="#{Catalogo.C5}">en donde se sitúan los volcanes Irazú y Turrialba, hacen que Cartago sea</p>
+                                                            <p th:text="#{Catalogo.C6}">una excelente provincia para vacacionar</p>
+               </footer>
                
             </center>
         </article>
@@ -83,11 +74,12 @@
             <center>
                 
                <a th:href="@{/Heredia}"> <img src="Imagenes/4Heredia.jpeg" alt=""/></a>
-               <br><br><footer class="descripProvinia">Aun siendo la provincia más pequeña, sus zonas montañosas de esta se <br>
-                   caracterizan por las grandes extensiones de bosques y el clima agradable<br> 
-                   lo cual la convierte como el sitio ideal para aquellas personas que quieran <br>
-                   pasar un fin de semana alejados de la ciudad con un clima fresco y vistas <br>
-                   increíbles </footer>
+               <br><br><footer class="descripProvinia">  <p th:text="#{Catalogo.H1}">Aun siendo la provincia más pequeña, sus zonas montañosas de esta se</p>
+                                                         <p th:text="#{Catalogo.H2}">caracterizan por las grandes extensiones de bosques y el clima agradable</p>
+                                                         <p th:text="#{Catalogo.H3}">lo cual la convierte como el sitio ideal para aquellas personas que quieran</p>
+                                                         <p th:text="#{Catalogo.H4}">pasar un fin de semana alejados de la ciudad con un clima fresco y vistas</p>
+                                                         <p th:text="#{Catalogo.H5}">increíbles</p>  
+               </footer>
                
             </center>
         </article>
@@ -100,9 +92,10 @@
             <center>
                 
                <a th:href="@{/Puntarenas}"> <img src="Imagenes/5Puntarenas.jpeg" alt=""/></a>
-               <br><br><footer class="descripProvinia"> Puntarenas no solo se basa en hermosas playas también tiene otros puntos<br> 
-                   atractivos como Muelle grande, la catedral y el parque mora cañas.<br> 
-                   También está el característico faro y el paseo de los turistas</footer>
+               <br><br><footer class="descripProvinia"> <p th:text="#{Catalogo.P1}">Puntarenas no solo se basa en hermosas playas también tiene otros puntos</p> 
+                                                        <p th:text="#{Catalogo.P2}">atractivos como Muelle grande, la catedral y el parque mora cañas.</p> 
+                                                        <p th:text="#{Catalogo.P3}">También está el característico faro y el paseo de los turistas</p>
+               </footer>
                
             </center>
         </article>
@@ -115,11 +108,13 @@
             <center>
                 
                 <a th:href="@{/Guanacaste}"><img src="Imagenes/6Guanacaste.jpeg" alt=""/></a>
-                <br><br><footer class="descripProvinia">En esta provincia se encuentra una importante parte del patrimonio natural<br>
-                    y cultural costarricense por lo cual hay muchas áreas protegidas con <br>
-                    ecosistemas acuáticos, montañosos y terrestres. La belleza de sus paisajes<br>
-                    que van desde el bosque seco tropical hasta el bosque montañoso, su cálido<br> 
-                    clima y su fértil naturaleza, han hecho que Guanacaste sea uno de los lugares<br> más solicitados por el turismo local e internacional</footer>
+                <br><br><footer class="descripProvinia">    <p th:text="#{Catalogo.G1}">En esta provincia se encuentra una importante parte del patrimonio natural</p> 
+                                                            <p th:text="#{Catalogo.G2}">y cultural costarricense por lo cual hay muchas áreas protegidas con</p> 
+                                                            <p th:text="#{Catalogo.G3}">ecosistemas acuáticos, montañosos y terrestres. La belleza de sus paisajes</p> 
+                                                            <p th:text="#{Catalogo.G4}">que van desde el bosque seco tropical hasta el bosque montañoso, su cálido</p>  
+                                                            <p th:text="#{Catalogo.G5}">clima y su fértil naturaleza, han hecho que Guanacaste sea uno de los lugares</p>  
+                                                            <p th:text="#{Catalogo.G6}">más solicitados por el turismo local e internacional</p> 
+                </footer>
                 
             </center>
         </article>
@@ -132,10 +127,11 @@
             <center>
                 
                 <a th:href="@{/Limon}"><img src="Imagenes/7Limon.jpeg" alt=""/></a>
-                <br><br><footer class="descripProvinia">Rodeada de cerradas junglas, imponentes montañas y paradisíacas playas,<br> 
-                    la  provincia caribeña es un paraíso natural. Playas como Puerto viejo, <br>
-                    Cahuita y punta uva y el parque braulio carrillo hace que limón sea un <br>\
-                    excelente sitio para ir de vacaciones</footer>
+                <br><br><footer class="descripProvinia">       <p th:text="#{Catalogo.L1}">Rodeada de cerradas junglas, imponentes montañas y paradisíacas playas,</p>
+                                                               <p th:text="#{Catalogo.L2}">la  provincia caribeña es un paraíso natural. Playas como Puerto viejo,</p>
+                                                               <p th:text="#{Catalogo.L3}">Cahuita y punta uva y el parque braulio carrillo hace que limón sea un</p>
+                                                               <p th:text="#{Catalogo.L4}">excelente sitio para ir de vacaciones</p>
+                </footer>
                 
             </center>
         </article>
@@ -143,8 +139,9 @@
         
         
         <br><br><br><br><br>
-        <footer class="footer2">
-            <p>Para mas informacion llama al 2266-0632</p>
-        </footer>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    
     </body>
 </html>
+
