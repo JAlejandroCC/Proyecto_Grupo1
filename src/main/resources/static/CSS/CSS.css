@@ -139,6 +139,7 @@ body{
 
 
 /*Import para lograr el efecto en algunas imagenes del proyecto   */
+
 @import url('https://fonts.googleapis.com/css?family=Exo');
 
 .LoginImagen{
@@ -357,6 +358,14 @@ figure img {
   align-items: center;
   justify-content: center;
   min-height: 1vh;
+}
+.cambio{
+    text-decoration: none;
+    font-size: 18px;
+    color:black;
+}
+.aviso{
+    font-size: 28px;
 }
 
 

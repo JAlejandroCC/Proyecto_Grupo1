@@ -19,7 +19,7 @@
     <br><center> <h1 class="Titulo" th:text="#{gestionar.titulo}">Reservaciones</h1> </center>
 
     
-    <br><br><table border="1" style="margin: 0 auto;">
+    <br><br><table sec:authorize="hasRole('ROLE_admin') "border="1" style="margin: 0 auto;">
         <thead>
             <tr >
                 <th class="tabla" th:text="#{gestionar.nombre}">Nombre</th>
@@ -43,10 +43,75 @@
                 <td th:text="${cliente.fechaE}"></td>
                 <td th:text="${cliente.fechaS}"></td>
                 <td ><a class="linkTabla" th:href="@{/eliminarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.eliminar}">Eliminar</a></td>
-                <td ><a class="linkTabla" th:href="@{/modificarCliente/} + ${cliente.idcliente}" th:text="#{gestionar.modificar}">Modificar</a></td>
+                <td ><a class="linkTabla" th:href="@{/modificarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.modificar}">Modificar</a></td>
             </tr>
         </tbody>
     </table>
+    
+    <br><br><table sec:authorize="hasRole('ROLE_client') "border="1" style="margin: 0 auto;">
+        <thead>
+            <tr >
+                <th class="tabla" th:text="#{gestionar.nombre}">Nombre</th>
+                <th class="tabla" th:text="#{gestionar.apellidos}">Apellidos</th>
+                <th class="tabla" th:text="#{gestionar.cedula}">Cedula</th>
+                <th class="tabla" th:text="#{gestionar.huespedes}">Huespedes</th>
+                <th class="tabla" th:text="#{gestionar.provincia}">Provincia</th>
+                <th class="tabla" th:text="#{gestionar.fechaE}">Fecha de entrada</th>
+                <th class="tabla" th:text="#{gestionar.fechaS}">Fecha de salida</th>
+                <th class="tabla" th:text="#{gestionar.eliminar}">Eliminar</th>
+                <th class="tabla" th:text="#{gestionar.modificar}">Modificar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="cliente:${clientes}">
+                <td th:text="${cliente.nombre}"></td>
+                <td th:text="${cliente.apellidos}"></td>
+                <td th:text="${cliente.cedula}"> </td>
+                <td th:text="${cliente.personas}"></td>
+                <td th:text="${cliente.lugar}"></td>
+                <td th:text="${cliente.fechaE}"></td>
+                <td th:text="${cliente.fechaS}"></td>
+                <td ><a class="linkTabla" th:href="@{/eliminarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.eliminar}">Eliminar</a></td>
+                <td ><a class="linkTabla" th:href="@{/modificarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.modificar}">Modificar</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    
+    
+    <br><br><table sec:authorize="hasRole('ROLE_user')"border="1" style="margin: 0 auto;">
+        <thead>
+            <tr >
+                <th class="tabla" th:text="#{gestionar.nombre}">Nombre</th>
+                <th class="tabla" th:text="#{gestionar.apellidos}">Apellidos</th>
+                <th class="tabla" th:text="#{gestionar.cedula}">Cedula</th>
+                <th class="tabla" th:text="#{gestionar.huespedes}">Huespedes</th>
+                <th class="tabla" th:text="#{gestionar.provincia}">Provincia</th>
+                <th class="tabla" th:text="#{gestionar.fechaE}">Fecha de entrada</th>
+                <th class="tabla" th:text="#{gestionar.fechaS}">Fecha de salida</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="cliente:${clientes}">
+                <td th:text="${cliente.nombre}"></td>
+                <td th:text="${cliente.apellidos}"></td>
+                <td th:text="${cliente.cedula}"> </td>
+                <td th:text="${cliente.personas}"></td>
+                <td th:text="${cliente.lugar}"></td>
+                <td th:text="${cliente.fechaE}"></td>
+                <td th:text="${cliente.fechaS}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <center>
+        <section sec:authorize="hasRole('ROLE_user')">
+        <h2 th:text="#{listar.pregunta}">¿Deseas elimiar o modificar alguna reservacion?</h2>
+        <br>
+        <a th:text="#{listar.click}" class="cambio" th:href="@{/cambio}">Click aqui</a>
+        </section>
+    </center>
     
     
 
@@ -59,6 +124,8 @@
         <img src="Imagenes/Hoteles mas visitados 3.jpeg" alt=""/>
         <figcaption><a th:href="@{Catalogo}" class="figcap" th:text="#{image.figcaption}">Ver mas hoteles</a></figcaption>
     </figure>
+    
+    
 
     <br><br><br><br>
 

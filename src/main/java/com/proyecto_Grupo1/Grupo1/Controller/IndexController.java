@@ -32,33 +32,5 @@ public class IndexController
            
    
    
-//   @GetMapping("/nuevoCliente")
-//   public String nuevoCliente(Cliente cliente){
-//       return "Agregar";
-//   }
-//   
-//   @PostMapping("/guardarCliente")
-//   public String guardarCliente(Cliente cliente)
-//   {
-//       clienteService.save(cliente);
-//       return "redirect:/";
-//   }
-//   
-//   @GetMapping("/modificarCliente/{idcliente}")
-//   public String modificarCliente(Cliente cliente, Model model)
-//   {
-//       cliente = clienteService.getCliente(cliente);
-//       model.addAttribute("cliente",cliente);
-//       return "modificar";
-//   }
-//   
-//   
-//   @GetMapping("/eliminarCliente/{idcliente}")
-//   public String eliminarCliente(Cliente cliente, Model model)
-//   {
-//       
-//       clienteService.delete(cliente);
-//       return "redirect:/";
-//   }
    
 }

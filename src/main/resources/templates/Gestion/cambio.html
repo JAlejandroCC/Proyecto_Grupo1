@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>ReservaTrip • cambio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
+        <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: headerLogin"></header> 
+    <center>
+        <section>
+            <br><br>
+            <h1 th:text="#{cambio.aviso}" class="aviso">Aviso!</h1>
+            <br>
+            <h3 th:text="#{cambio.titulo1}">Para hacer una reserva, modificar o elimiar</h3>
+            <h3 th:text="#{cambio.titulo2}">una reserva debes iniciar sesion como cliente</h3>
+            <br>
+            <a th:text="#{cambio.enlace1}" th:href="@{/}">Volver al inicio</a> <form  method="POST" th:action="@{/logout}"> <a th:text="#{cambio.enlace2}" class="cambio" href="#" onclick="this.parentNode.submit();" >Cambiar de usuario</a></form></li>
+        </section>
+    </center>
+    
+    <br><br><br><br>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>

@@ -6,21 +6,15 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     </head>
 
 
-    <aside class="barralateral">
-        <br><br><br><br><br>
-        <h2>Otras provincias</h2>
-        <br><br>
-        <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
-        <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
-        <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
-        <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
-        <a id="linkP" th:href="@{/Guanacaste}"><h3>Guanacaste</h3><br></a>
-        <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
-
-    </aside>
+    <aside th:replace="layout/plantilla :: asideCartago2"></aside> 
 
 
     <body class="body2">
@@ -53,9 +47,8 @@
            
             <br><br>
             
-            <form >
-            <input class="boton" type="submit" name="guardar" value="Reservar"/>
-            </form>
+            <section th:replace="layout/plantilla :: botonesAgregar"/>
+            <section th:replace="layout/plantilla :: agregarCliente"/>
             
             <br><br><br><br><br><br>
             

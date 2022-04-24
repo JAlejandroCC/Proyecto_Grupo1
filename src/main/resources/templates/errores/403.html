@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/199/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>ReservaTrip • error</title>
+        <meta charset="UTF-8">
+        <style>
+            .contenido {
+                text-align: center;
+                border-radius: 20px;
+                top:50%;
+                left:50%;
+                margin-left: -250px;
+                margin-top: -75px;
+                width: 500px;
+                height: 150px;
+                background-color: #17A589;
+                position: fixed;
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenido">
+            <h2>[[#{error.titulo}]]</h2>
+            <p>[[#{error.descripcion}]]</p>
+            <a th:href="@{/login}">[[#{errot.regresar}]]</a>
+        </div>
+    </body>
+</html>

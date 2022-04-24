@@ -6,9 +6,14 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     </head>
 
-    <aside th:replace="layout/plantilla :: asideSanJose"></aside> 
+    <aside th:replace="layout/plantilla :: asideSanJose2"></aside> 
     
     <body class="body2">
         
@@ -41,9 +46,8 @@
             
             <br><br>
             
-            <form >
-            <input class="boton" type="submit" name="guardar" value="Reservar"/>
-            </form>
+            <section th:replace="layout/plantilla :: botonesAgregar"/>
+            <section th:replace="layout/plantilla :: agregarCliente"/>
             
             <br><br><br><br><br><br>
             
