@@ -6,35 +6,46 @@
         <meta charset="UTF-8">  
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
     </head>
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     <body>
-        
+
         <header th:fragment="headerIndex" class="header">
             <nav class="nav ">
-            <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
-            <ul class="menu">
-                <li class="item"><a class="link fuente" th:href="@{/}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                    
-                <li class="Separador"></li>
-                <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
-                <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-        </nav>
+                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+                <ul class="menu">
+                    <li class="item"><a class="link fuente" th:href="@{/}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>     
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="itemD"><form class="logout " method="POST" th:action="@{/logout}"> <a href="#" onclick="this.parentNode.submit();" class="link fuente"> <i class="fa-solid fa-arrow-right-from-bracket"></i></a></form></li> 
+                </ul>
+            </nav>
         </header>
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        <header th:fragment="headerLogin" class="header">
+            <nav>
+                <h1 class="logo2">Bienvenido</h1>
+            </nav>
+        </header>
+        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <header th:fragment="headerSanJose" class="header">
             <nav class="nav ">
                 <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
                 <ul class="menu">
                     <li class="item"><a class="link fuente" th:href="@{Catalogo}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                   <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -62,8 +73,8 @@
                 <ul class="menu">
                     <li class="item"><a class="link fuente" th:href="@{/SanJose}"><i class="fa-solid fa-arrow-left"></i></a></li>
                     <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -71,12 +82,12 @@
                 </ul>
             </nav>
         </header>
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
         <aside th:fragment="asideAlajuela" class="barralateral">
             <br><br><br><br><br>
             <h2 th:text="#{aside.titulo}">Otras provincias</h2>
             <br><br>
-            <a id="linkP" th:href="@{/Alajuela}"><h3>Alajuela</h3><br></a>
+            <a id="linkP" th:href="@{/SanJose}"><h3>San Jose</h3><br></a>
             <a id="linkP" th:href="@{/Cartago}"><h3>Cartago</h3><br></a>
             <a id="linkP" th:href="@{/Heredia}"><h3>Heredia</h3><br></a>
             <a id="linkP" th:href="@{/Puntarenas}"><h3>Puntarenas</h3><br></a>
@@ -84,14 +95,28 @@
             <a id="linkP" th:href="@{/Limon}"><h3>Limon</h3></a>
         </aside>
 
+
+        <aside th:fragment="asideAlajuela2" class="barralateral">
+            <br><br><br>
+            <h2 class="asidetit" th:text="#{aside.titulo}">Otras provincias</h2>
+            <br><br>
+            <a id="linkP" th:href="@{/SanJose}"><h3 id="provletra">San Jose</h3><br></a>
+            <a id="linkP" th:href="@{/Cartago}"><h3 id="provletra">Cartago</h3><br></a>
+            <a id="linkP" th:href="@{/Heredia}"><h3 id="provletra">Heredia</h3><br></a>
+            <a id="linkP" th:href="@{/Puntarenas}"><h3 id="provletra">Puntarenas</h3><br></a>
+            <a id="linkP" th:href="@{/Guanacaste}"><h3 id="provletra">Guanacaste</h3><br></a>
+            <a id="linkP" th:href="@{/Limon}"><h3 id="provletra">Limon</h3></a>
+        </aside>
+
+
         <header th:fragment="headerAlajuelaHotel" class="header">
-            <nav class="nav ">
-                <a th:href="@{/}" class="logo fuente">ReservaTrip</a>
+            <nav class="nav">
                 <ul class="menu">
+                    <li><a th:href="@{/}" class="logofuente">ReservaTrip</a></li>
                     <li class="item"><a class="link fuente" th:href="@{/Alajuela}"><i class="fa-solid fa-arrow-left"></i></a></li>
-                   <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -99,7 +124,7 @@
                 </ul>
             </nav>
         </header>
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <aside th:fragment="asideCartago" class="barralateral">
             <br><br><br><br><br>
             <h2 th:text="#{aside.titulo}">Otras provincias</h2>
@@ -118,8 +143,8 @@
                 <ul class="menu">
                     <li class="item"><a class="link fuente" th:href="@{/Cartago}"><i class="fa-solid fa-arrow-left"></i></a></li>
                     <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -127,7 +152,7 @@
                 </ul>
             </nav>
         </header>
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <aside th:fragment="asideHeredia" class="barralateral">
             <br><br><br><br><br>
             <h2 th:text="#{aside.titulo}">Otras provincias</h2>
@@ -146,8 +171,8 @@
                 <ul class="menu">
                     <li class="item"><a class="link fuente" th:href="@{/Heredia}"><i class="fa-solid fa-arrow-left"></i></a></li>
                     <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -155,7 +180,7 @@
                 </ul>
             </nav>
         </header>
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <aside th:fragment="asidePuntarenas" class="barralateral">
             <br><br><br><br><br>
             <h2 th:text="#{aside.titulo}">Otras provincias</h2>
@@ -174,8 +199,8 @@
                 <ul class="menu">
                     <li class="item"><a class="link fuente" th:href="@{/Puntarenas}"><i class="fa-solid fa-arrow-left"></i></a></li>
                     <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -183,7 +208,7 @@
                 </ul>
             </nav>
         </header>
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <aside th:fragment="asideGuanacaste" class="barralateral">
             <br><br><br><br><br>
             <h2 th:text="#{aside.titulo}">Otras provincias</h2>
@@ -202,8 +227,8 @@
                 <ul class="menu">
                     <li class="item"><a class="link fuente" th:href="@{/Guanacaste}"><i class="fa-solid fa-arrow-left"></i></a></li>
                     <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -211,7 +236,7 @@
                 </ul>
             </nav>
         </header>
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         <aside th:fragment="asideLimon" class="barralateral"><br><br><br><br><br>
             <h2 th:text="#{aside.titulo}">Otras provincias</h2>
             <br><br>
@@ -229,8 +254,8 @@
                 <ul class="menu">
                     <li class="item"><a class="link fuente" th:href="@{/Limon}"><i class="fa-solid fa-arrow-left"></i></a></li>
                     <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
-                <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
-                <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                     
                     <li class="Separador"></li>
                     <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
                     <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
@@ -238,15 +263,87 @@
                 </ul>
             </nav>
         </header>
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        
+        -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
         <footer th:fragment="footer" class="footer">
-        <p>[[#{footer.contenido}]]    
-             <a class="lenguaje" th:href="@{/(lang=es)}">ES</a> |
-            <a class="lenguaje" th:href="@{/(lang=en)}">EN</a></p>
-    </footer>
+            <p>[[#{footer.contenido}]]
+                <a class="lenguaje" th:href="@{/(lang=es)}">ES</a> |
+                <a class="lenguaje" th:href="@{/(lang=en)}">EN</a>
+            <form method="POST" th:action="@{/logout}"><a href="#" onclick="this.parentNode.submit();" class="nav-link"></i></form</i> [[#{plantilla.logout}]]</a></p>
+</footer>
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    </body>
+<section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+    <div class="container">
+        <div class="abs-center">
+            <div class="row">
+                <div class="col-md-3" >   
+                    <button  
+                        type="submit" 
+                        class="btn btn-secondary " 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#agregarCliente">
+                        [[#{accion.agregar}]]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section th:fragment="agregarCliente">
+    <div id="agregarCliente" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title" th:text="#{accion.reservar}">Hacer reservacion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> 
+                <form th:action="@{/guardarReserva}" th:object="${clientes}"
+                      method="POST" class="was-validated">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="nombre" th:text="#{cliente.nombre}">Nombre:</label>
+                            <input type="text" class="form-control" name="nombre" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos" th:text="#{cliente.apellidos}">Apellidos:</label>
+                            <input type="text" class="form-control" name="apellidos" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="cedula" th:text="#{cliente.cedula}">Cedula:</label>
+                            <input type="int" class="form-control" name="cedula" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="personas" th:text="#{cliente.huespedes}">Huespedes:</label>
+                            <input type="text" class="form-control" name="personas">
+                        </div>
+                        <div class="form-group">
+                            <label for="lugar" th:text="#{cliente.lugar}">Provinvia:</label>
+                            <input type="text" class="form-control" name="lugar" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaE" th:text="#{cliente.entrada}">Fecha de entrada</label>
+                            <input type="date" class="form-control" name="fechaE" required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaS" th:text="#{cliente.salida}">Fecha de salida</label>
+                            <input type="date" class="form-control" name="fechaS" required="true">
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="submit" th:text="#{accion.guardar}">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
 </html>

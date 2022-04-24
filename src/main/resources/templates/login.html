@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/199/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+    <title>ReservaTrip • Login</title>
+</head>
+<body>
+
+
+    <header th:replace="layout/plantilla :: headerLogin"></header> 
+    
+    <br><br><br>
+
+    <section id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mx-auto">
+                    <div class="card border-secondary">
+                        <div class="card-header bg-secondary text-light">
+                            <h4>[[#{login.login}]]</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" th:action="@{/login}">
+                                <div class="row py-1 mb-2 bg-light">
+                                    <div class="form-group">
+                                        <label for="username">[[#{login.username}]]:</label>
+                                        <input type="text" name="username" id="username"/>
+                                    </div>
+                                </div>
+                                <div class="row py-1 mb-2 bg-light">
+                                    <div class="form-group">
+                                        <label for="password">  [[#{login.password}]]:</label>
+                                        <input type="password" name="password" id="password"/>
+                                    </div>
+                                </div>
+                                <div class="row  py-1 mb-2 bg-secondary">
+                                    <button type="submit" class="btn btn-secondary btn-sm">[[#{login.login}]]</button>                                        
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <br><br>
+    
+    <figure class="image3">
+        <h3 class="LoginTexto">ReservaTrip</h3>
+        <img src="Imagenes/Hoteles mas visitados 2.jpeg" alt=""/>
+    </figure>
+    
+    <footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>
