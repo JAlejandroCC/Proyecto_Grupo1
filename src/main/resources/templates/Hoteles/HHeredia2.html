@@ -45,7 +45,9 @@
 
             <br><br>
 
-            <section th:replace="layout/plantilla :: botonesAgregar"/>
+            <section sec:authorize="hasRole('ROLE_admin')" th:replace="layout/plantilla :: botonesAgregar"/>
+            <section sec:authorize="hasRole('ROLE_client')" th:replace="layout/plantilla :: botonesAgregar2"/>
+            <section sec:authorize="hasRole('ROLE_user')" th:replace="layout/plantilla :: cambio"/>
             <section th:replace="layout/plantilla :: agregarCliente"/>
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.180218181185!2d-84.11541618480138!3d10.001967775743692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fac66b35976b%3A0x6254e49b2efe3ce6!2sValladolid!5e0!3m2!1ses-419!2scr!4v1649117244672!5m2!1ses-419!2scr"

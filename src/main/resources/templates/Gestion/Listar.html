@@ -19,7 +19,8 @@
     <br><center> <h1 class="Titulo" th:text="#{gestionar.titulo}">Reservaciones</h1> </center>
 
     
-    <br><br><table sec:authorize="hasRole('ROLE_admin') "border="1" style="margin: 0 auto;">
+    <br><br>
+    <table sec:authorize="hasRole('ROLE_admin') "border="1" style="margin: 0 auto;">
         <thead>
             <tr >
                 <th class="tabla" th:text="#{gestionar.nombre}">Nombre</th>
@@ -31,22 +32,25 @@
                 <th class="tabla" th:text="#{gestionar.fechaS}">Fecha de salida</th>
                 <th class="tabla" th:text="#{gestionar.eliminar}">Eliminar</th>
                 <th class="tabla" th:text="#{gestionar.modificar}">Modificar</th>
+                <th class="tabla" th:text="#{gestionar.generar}">Generar Reporte</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="cliente:${clientes}">
-                <td th:text="${cliente.nombre}"></td>
-                <td th:text="${cliente.apellidos}"></td>
-                <td th:text="${cliente.cedula}"> </td>
-                <td th:text="${cliente.personas}"></td>
-                <td th:text="${cliente.lugar}"></td>
-                <td th:text="${cliente.fechaE}"></td>
-                <td th:text="${cliente.fechaS}"></td>
+                <td th:text="${cliente.nombre}" style="text-align: center;"></td>
+                <td th:text="${cliente.apellidos}" style="text-align: center;"></td>
+                <td th:text="${cliente.cedula}" style="text-align: center;"> </td>
+                <td th:text="${cliente.personas}" style="text-align: center;"></td>
+                <td th:text="${cliente.lugar}" style="text-align: center;"></td>
+                <td th:text="${cliente.fechaE}" style="text-align: center;"></td>
+                <td th:text="${cliente.fechaS}" style="text-align: center;"></td>
                 <td ><a class="linkTabla" th:href="@{/eliminarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.eliminar}">Eliminar</a></td>
-                <td ><a class="linkTabla" th:href="@{/modificarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.modificar}">Modificar</a></td>
+                <td ><a class="linkTabla" th:href="@{/modificarReserva} + ${cliente.idcliente}" th:text="#{gestionar.modificar}">Modificar</a></td>
+                <td ><a class="linkTabla" th:href="@{/cliente/ReporteReservas}" th:text="#{gestionar.generar}">Generar Reporte</a></td>
             </tr>
         </tbody>
     </table>
+        
     
     <br><br><table sec:authorize="hasRole('ROLE_client') "border="1" style="margin: 0 auto;">
         <thead>
@@ -64,15 +68,15 @@
         </thead>
         <tbody>
             <tr th:each="cliente:${clientes}">
-                <td th:text="${cliente.nombre}"></td>
-                <td th:text="${cliente.apellidos}"></td>
-                <td th:text="${cliente.cedula}"> </td>
-                <td th:text="${cliente.personas}"></td>
-                <td th:text="${cliente.lugar}"></td>
-                <td th:text="${cliente.fechaE}"></td>
-                <td th:text="${cliente.fechaS}"></td>
+                <td th:text="${cliente.nombre}" style="text-align: center;"></td>
+                <td th:text="${cliente.apellidos}" style="text-align: center;"></td>
+                <td th:text="${cliente.cedula}" style="text-align: center;"> </td>
+                <td th:text="${cliente.personas}" style="text-align: center;"></td>
+                <td th:text="${cliente.lugar}" style="text-align: center;"></td>
+                <td th:text="${cliente.fechaE}" style="text-align: center;"></td>
+                <td th:text="${cliente.fechaS}" style="text-align: center;"></td>
                 <td ><a class="linkTabla" th:href="@{/eliminarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.eliminar}">Eliminar</a></td>
-                <td ><a class="linkTabla" th:href="@{/modificarReserva/} + ${cliente.idcliente}" th:text="#{gestionar.modificar}">Modificar</a></td>
+                <td ><a class="linkTabla" th:href="@{/modificarReserva} + ${cliente.idcliente}" th:text="#{gestionar.modificar}">Modificar</a></td>
             </tr>
         </tbody>
     </table>
@@ -94,13 +98,13 @@
         </thead>
         <tbody>
             <tr th:each="cliente:${clientes}">
-                <td th:text="${cliente.nombre}"></td>
-                <td th:text="${cliente.apellidos}"></td>
-                <td th:text="${cliente.cedula}"> </td>
-                <td th:text="${cliente.personas}"></td>
-                <td th:text="${cliente.lugar}"></td>
-                <td th:text="${cliente.fechaE}"></td>
-                <td th:text="${cliente.fechaS}"></td>
+                <td th:text="${cliente.nombre}" style="text-align: center;"></td>
+                <td th:text="${cliente.apellidos}" style="text-align: center;"></td>
+                <td th:text="${cliente.cedula}" style="text-align: center;"> </td>
+                <td th:text="${cliente.personas}" style="text-align: center;"></td>
+                <td th:text="${cliente.lugar}" style="text-align: center;"></td>
+                <td th:text="${cliente.fechaE}" style="text-align: center;"></td>
+                <td th:text="${cliente.fechaS}" style="text-align: center;"></td>
             </tr>
         </tbody>
     </table>

@@ -48,7 +48,9 @@
            
             <br><br>
             
-            <section th:replace="layout/plantilla :: botonesAgregar"/>
+            <section sec:authorize="hasRole('ROLE_admin')" th:replace="layout/plantilla :: botonesAgregar"/>
+            <section sec:authorize="hasRole('ROLE_client')" th:replace="layout/plantilla :: botonesAgregar2"/>
+            <section sec:authorize="hasRole('ROLE_user')" th:replace="layout/plantilla :: cambio"/>
             <section th:replace="layout/plantilla :: agregarCliente"/>
             
             <br><br><br><br><br><br>

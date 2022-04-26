@@ -46,9 +46,10 @@
             
             <br><br>
             
-            <section th:replace="layout/plantilla :: botonesAgregar"/>
+            <section sec:authorize="hasRole('ROLE_admin')" th:replace="layout/plantilla :: botonesAgregar"/>
+            <section sec:authorize="hasRole('ROLE_client')" th:replace="layout/plantilla :: botonesAgregar2"/>
+            <section sec:authorize="hasRole('ROLE_user')" th:replace="layout/plantilla :: cambio"/>
             <section th:replace="layout/plantilla :: agregarCliente"/>
-            
             <br><br><br><br><br><br>
             
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.968734801366!2d-84.1329641848016!3d9.93655937684872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fc82575ee9d5%3A0xfee5053187aca4ee!2sWyndham%20Garden%20Escaz%C3%BA!5e0!3m2!1ses-419!2scr!4v1649115720017!5m2!1ses-419!2scr"

@@ -116,6 +116,15 @@ body{
    width:100%;
    background:#566573;
 }
+.contenido{
+    background-color: whitesmoke;
+    top: 80px;
+    position: fixed;
+    bottom: 20px;
+    overflow: auto;
+    width: 100%;
+    
+}
 /*----------------------------------------------------------------------------------------------------------*/
 
 
@@ -271,6 +280,7 @@ figure img {
     padding: 10px;
     overflow: auto;
 }
+
 /*----------------------------------------------------------------------------------------------------------*/
 
 
@@ -306,19 +316,56 @@ figure img {
 
 
 /*   Estilos para la pantalla Guia de uso   */
+.body3
+{
+    fot-family: sans-serif;
+    padding: 90px 20px 0;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 12%;
+    right: 40%;
+    height: 82%;
+    width: 60%;
+    padding: 10px;
+    overflow: auto;
+}
+
+.barralateral2{
+    font-size: 22px;
+    color:#17A589;
+    position: fixed;
+    top: 8.50%;
+    right: 0;
+    height: 100%;
+    width: 40%;
+    background-color: whitesmoke;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+}
 .GuiaDeUsoT{
     font-size: 33px;
-    color:#17A589;    
+    color:#17A589;  
+    text-align: center;
+}
+.T{
+    color:#17A589;  
+    text-align: center;
 }
 .GuiaDeUsoP{
     font-size: 22px;
+    text-align: center;
+    
 }
 .GuiaDeUsoR{
      font-size: 18px;
+     text-align: center;
 }
 .GuiaDeUsoL{
     text-decoration: none;
+    text-align: center;
 }
+
 .descripHotel{
     font-size: 24px;
     text-decoration: none;

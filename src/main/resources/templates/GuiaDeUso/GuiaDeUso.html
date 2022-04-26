@@ -6,32 +6,84 @@
         <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body class="body3">
 
         <header th:replace="layout/plantilla :: headerIndex"></header> 
 
+        <aside class="barralateral2">
+            <br><br><br><br><br><br><br><br><br><br>
+            <img src="Imagenes/hotel.png" alt=""/>
+        </aside>
+
         <br>
         <h1 class="GuiaDeUsoT" th:text="#{GuiaDeUso.Paso_a_Paso}">Paso a paso para reservar</h1>
-        <br><br><br><br><br><br><br><br>
-        <h1 class="GuiaDeUsoT" th:text="#{GuiaDeUso.PF}">Preguntas frecuentes</h1>
         <br><br>
-        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P1}" >¿Tienen redes sociales?</h3> <br>
-        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R1}">Si, reserva trip cuenta con <a class="GuiaDeUsoL" href="https://www.instagram.com/reservatrip_cr/">instagram,</a> <a class="GuiaDeUsoL"  href="https://twitter.com/ReservaTrip">twitter</a> y <a class="GuiaDeUsoL" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA">youtube</a></p>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso1}">Recuerda que para crear eliminar o modificar reservaciones debes iniciar sesion como cliente</p>
         <br><br>
-        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P2}">¿La reservación se puede modificar o eliminar?</h3> <br>
-        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R2}">Si, pero primero se debe hacer una reservación para que se habilite la opción de modificar o eliminar</p>
+        <center><img src="Imagenes/Paso1.png" alt=""/></center>
         <br><br>
-        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P3}">¿Puedo realizar reservaciones estando fuera del país?</h3> <br>
-        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R3}">Si, La pagina está habilitada para que puedas hacer tu reservación desde cualquier parte del mundo</p>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso2}">En la pagina de inicio te vas a la parte de arriba y seleccionas catalogo</p>
         <br><br>
-        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P4}">¿Cuentan con hoteles en todo el territorio nacional?</h3> <br>
-        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R4}">Si, Contamos con un amplio catálogo en el que puedes encontrar hospedaje en cualquiera de las siete provincias.</p>
+        <center><img src="Imagenes/Paso2.png" alt=""/></center>
         <br><br>
-        <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P5}">¿Cómo eligen los hoteles que hay en la pagina?</h3> <br>
-        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R5}">Elegimos los hoteles mejores valorados en cada zona del país</p>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso3}">En catalogo escoges la provincia en la que quieres reservar</p>
+        <br><br>
+        <center><img src="Imagenes/Paso3.png" alt=""/></center>
+        <br><br>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso4}">Cuando eliges la provincia la pagina te mostrara los hoteles disponibles en esa provincia</p>
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso42}">y cuando veas el que te guste de las click a la imagen</p>
+        <br><br>
+        <center><img src="Imagenes/Paso4.png" alt=""/></center>
+        <br><br>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso5}">Esta te llevara a la pagina en la cual podras ver imagenes descripcion y precio del hotel y estara el boton de reservar</p>
+        <br><br>
+        <center><img src="Imagenes/Paso5.png" alt=""/></center>
+        <br><br>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso6}">Una vez que presiones el boton de reservarsta ventana en la cual tendras que completar con los datos que te solicita</p>
+        <br><br>
+        <center><img src="Imagenes/Paso6.png" alt=""/></center>
+        <br><br>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso7}">Una vez que llenes los datos y le des al boton de reservar se te llevara de nuevo a la pagina de inicio, para ver</p>
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso72}">tu reserva tendras que dirigirte al apartado de gestionar reservaciones que s eubica en el header de la pagina</p>
+        <br><br>
+        <center><img src="Imagenes/Paso7.png" alt=""/></center>
+        <br><br>
+        
+        <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.Paso8}">En este podras ver las reservaciones hechas y tambien podras modificarkas o eliminarlas</p>
+        <br><br>
+        <center><img src="Imagenes/Paso8.png" alt=""/></center>
+        <br><br>
 
-        <br><br><br><br>
 
-        <footer th:replace="layout/plantilla :: footer"></footer>
+    <br><br><br><br><br>
+    <h1 class="GuiaDeUsoT" th:text="#{GuiaDeUso.PF}">Preguntas frecuentes</h1>
+    <br><br>
+    <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P1}" >¿Tienen redes sociales?</h3> <br>
+    <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R1}">Si, reserva trip cuenta con <a class="GuiaDeUsoL" href="https://www.instagram.com/reservatrip_cr/">instagram,</a> <a class="GuiaDeUsoL"  href="https://twitter.com/ReservaTrip">twitter</a> y <a class="GuiaDeUsoL" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA">youtube</a></p>
+    <br><br>
+    <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P2}">¿La reservación se puede modificar o eliminar?</h3> <br>
+    <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R2}">Si, pero primero se debe hacer una reservación para que se habilite la opción de modificar o eliminar</p>
+    <br><br>
+    <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P3}">¿Puedo realizar reservaciones estando fuera del país?</h3> <br>
+    <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R3}">Si, La pagina está habilitada para que puedas hacer tu reservación desde cualquier parte del mundo</p>
+    <br><br>
+    <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P4}">¿Cuentan con hoteles en todo el territorio nacional?</h3> <br>
+    <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R4}">Si, Contamos con un amplio catálogo en el que puedes encontrar hospedaje en cualquiera de las siete provincias.</p>
+    <br><br>
+    <h3 class="GuiaDeUsoP"  th:text="#{GuiaDeUso.P5}">¿Cómo eligen los hoteles que hay en la pagina?</h3>  <br>
+    <p class="GuiaDeUsoR" th:text="#{GuiaDeUso.R5}">Elegimos los hoteles mejores valorados en cada zona del país</p>
 
-    </body>
+    <br><br><br><br>
+
+
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
+
+</body>

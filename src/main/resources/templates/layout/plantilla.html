@@ -377,107 +377,105 @@
             </div>
         </section>
 
+   
+        <section th:fragment="cambio">
+             <center>
+            <h2 th:text="#{resercar.pregunta}">¿Deseas hacer una reservacion?</h2>
+            <br>
+            <a th:text="#{listar.click}" class="cambio" th:href="@{/cambio}">Click aqui</a>
+            </center>    
+        </section>
+   
 
-
-        <section th:fragment="agregarCliente">
-            <div id="agregarCliente" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header bg-info text-white">
-                            <h5 class="modal-title" th:text="#{accion.reservar}">Hacer reservacion</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div> 
-                        <form th:action="@{/guardarReserva}" th:object="${clientes}"
-                              method="POST" class="was-validated">
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="nombre" th:text="#{cliente.nombre}">Nombre:</label>
-                                    <input type="text" class="form-control" name="nombre" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="apellidos" th:text="#{cliente.apellidos}">Apellidos:</label>
-                                    <input type="text" class="form-control" name="apellidos" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cedula" th:text="#{cliente.cedula}">Cedula:</label>
-                                    <input type="int" class="form-control" name="cedula" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="personas" th:text="#{cliente.huespedes}">Huespedes:</label>
-                                    <input type="text" class="form-control" name="personas" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="lugar" th:text="#{cliente.lugar}">Provinvia:</label>
-                                    <input type="text" class="form-control" name="lugar" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="fechaE" th:text="#{cliente.entrada}">Fecha de entrada</label>
-                                    <input type="date" class="form-control" name="fechaE" required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="fechaS" th:text="#{cliente.salida}">Fecha de salida</label>
-                                    <input type="date" class="form-control" name="fechaS" required="true">
-                                </div>
-
-
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-primary" type="submit" th:text="#{accion.guardar}">Guardar</button>
-                            </div>
-                        </form>
+    <section th:fragment="botonesAgregar2" class="py-4 mb-4 bg-light">
+        <div class="container">
+            <div class="abs-center">
+                <div class="row">
+                    <div class="col-md-3" >   
+                        <button  
+                            type="submit" 
+                            class="btn btn-secondary " 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#agregarCliente">
+                            [[#{accion.agregar}]]
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section th:fragment="editarCliente">            
-            <form method="POST"
-                  th:action="@{/cliente/guardar}"
-                  th:object="${cliente}"
-                  class="was-validated">
-                <input type="hidden" name="idCliente" th:field="*{idCliente}"/>
-                <section th:replace="cliente/fragmentosCliente :: botonesEditar"/> 
-                <div id="details">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>[[#{accion.actualizar}]]</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label for="nombre" th:text="#{cliente.nombre}">Nombre: </label>
-                                            <input type="text" class="form-control" name="nombre" th:field="*{nombre}"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="apellidos" th:text="#{cliente.apellidos}">Apellidos: </label>
-                                            <input type="text"  class="form-control" name="apellidos" th:field="*{apellidos}"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="cedula" th:text="#{cliente.correo}">Cedula: </label>
-                                            <input type="text"  class="form-control" name="cedula" th:field="*{cedula}"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="personas" th:text="#{cliente.telefono}">Huespedes </label>
-                                            <input type="tel"  class="form-control" name="personas" th:field="*{personas}"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="fechaE" th:text="#{cliente.telefono}">Fecha de entrada: </label>
-                                            <input type="date"  class="form-control" name="fechaE" th:field="*{fechaE}"/>
-                                        </div> 
-                                        <div class="form-group">
-                                            <label for="fechaS" th:text="#{cliente.telefono}">Fecha de salida </label>
-                                            <input type="date"  class="form-control" name="fechaS" th:field="*{fechaS}"/>
-                                        </div>
-                                    </div>
-                                </div>
+
+    <section th:fragment="agregarCliente">
+        <div id="agregarCliente" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-secondary text-white">
+                        <h5 class="modal-title" th:text="#{accion.reservar}">Hacer reservacion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> 
+                    <form th:action="@{/guardarReserva}" th:object="${clientes}"
+                          method="POST" class="was-validated">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="nombre" th:text="#{cliente.nombre}">Nombre:</label>
+                                <input type="text" class="form-control" name="nombre" required="true">
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </section>
+                            <div class="form-group">
+                                <label for="apellidos" th:text="#{cliente.apellidos}">Apellidos:</label>
+                                <input type="text" class="form-control" name="apellidos" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="cedula" th:text="#{cliente.cedula}">Cedula:</label>
+                                <input type="int" class="form-control" name="cedula" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="personas" th:text="#{cliente.huespedes}">Huespedes:</label>
+                                <input type="text" class="form-control" name="personas" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="lugar" th:text="#{cliente.lugar}">Provinvia:</label>
+                                <input type="text" class="form-control" name="lugar" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="fechaE" th:text="#{cliente.entrada}">Fecha de entrada</label>
+                                <input type="date" class="form-control" name="fechaE" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="fechaS" th:text="#{cliente.salida}">Fecha de salida</label>
+                                <input type="date" class="form-control" name="fechaS" required="true">
+                            </div>
 
-    </body>
+
+                        </div>
+                        <div class="modal-footer">
+                            <input class="btn btn-secondary" type="reset"  th:value="#{accion.reset}">
+                            <button class="btn btn-secondary" type="submit" th:text="#{accion.guardar}">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+        <header th:fragment="headerEditar" class="header">
+            <nav class="nav ">
+                <ul class="menu">
+                    <li><a th:href="@{/}" class="logofuente">ReservaTrip</a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}"><i class="fa-solid fa-arrow-left"></i></a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/GuiaDeUso}" th:text="#{header.1}">Guia de Uso</a></li>
+                    <li class="item"><a class="link fuente" th:href="@{/listarReservas}" th:text="#{header.2}">Gestionar Reservaciones</a></li>                                       
+                    <li class="item"><a class="link fuente" th:href="@{Catalogo}" th:text="#{header.3}">Catalogo</a></li>                      
+                    <li class="Separador"></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.instagram.com/reservatrip_cr/" ><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://twitter.com/ReservaTrip"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="itemD"><a class="link fuente" href="https://www.youtube.com/channel/UCibxKuw_BOQm1gwIBQUDKNA"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="itemD"><form class="logout " method="POST" th:action="@{/logout}"> <a href="#" onclick="this.parentNode.submit();" class="link fuente"> <i class="fa-solid fa-arrow-right-from-bracket"></i></a></form></li>
+                </ul>
+            </nav>
+        </header>
+
+    
+
+</body>
 </html>

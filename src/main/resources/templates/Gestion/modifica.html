@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-        <title>Listado</title>
-    </head>
-    <body>
-        <header th:replace="layout/plantilla :: headerIndex"></header>
+    <head>
+        <title>ReservaTrip • Reservacines</title>
+        <meta charset="UTF-8">
+        <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
+        <script src="https://kit.fontawesome.com/e32421c37b.js" crossorigin="anonymous"></script>
+        <link href="CSS/CSS.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
         
+    </head>
+    
+    <body>
         <div class="contenido">
-            <h2 th:text="#{articulo.datos}">Datos del articulo</h2>
-            <br>
-            <br>
-            <br>
+             <br><br>
+             <center><h1 class="T">Modificar reserva</h1></center>
+             <br><br>
             <form th:action="@{/guardarReserva}"
                   method="post"
                   th:object="${cliente}">
-                <input type="hidden" name="idcliente" th:field="*{idcliete}" />
-                <label for="nombre" th:text="#{articulo.descripcion}">Nombre: </label>
-                <input type="text" name="nombre" th:field="*{nombre}" />
-                <br>
-                <label for="apellidos" th:text="#{articulo.descripcion}">Aprllidos </label>
-                <input type="text" name="aprllidos" th:field="*{apellidos}" />
-                <br>
-                <label for="cedula" th:text="#{articulo.detalle}">cedula: </label>
-                <input type="text" name="cedula" th:field="*{cedula}" />
-                <br>
-                <label for="personas" th:text="#{articulo.precio}">Huespedes </label>
-                <input type="text" name="personas" th:field="*{personas}" />
-                <br>
-                <label for="lugar" th:text="#{articulo.existencias}">Provicia </label>
-                <input type="text" name="lugar" th:field="*{lugar}" />
-                <br>
-                <label for="fechaE" th:text="#{articulo.existencias}">Fecha de entrada </label>
-                <input type="date" name="fechaE" th:field="*{fechaE}" />
-                <br>
-                <label for="fechaS" th:text="#{articulo.existencias}">Fecha de salida </label>
-                <input type="date" name="fechaS" th:field="*{fechaS}" />
-                <br>
-                <input type="submit" name="guardar" th:value="#{accion.guardar}" />
+                <center>
+                <input type="hidden" name="idcliente" th:field="*{idcliente}" />
+                <label for="nombre" th:text="#{cliente.nombre}">Noumbre: </label>
+                <input type="text" name="nombre" th:field="*{nombre}" required/>
+                <br><br>
+                <label for="apellidos" th:text="#{cliente.apellidos}">Aprllidos </label>
+                <input type="text" name="aprllidos" th:field="*{apellidos}" required/>
+                <br><br>
+                <label for="cedula" th:text="#{cliente.cedula}">cedula: </label>
+                <input type="text" name="cedula" th:field="*{cedula}" required/>
+                <br><br>
+                <label for="personas" th:text="#{cliente.huespedes}">Huespedes </label>
+                <input type="text" name="personas" th:field="*{personas}" required/>
+                <br><br>
+                <label for="lugar" th:text="#{cliente.lugar}">Provicia </label>
+                <input type="text" name="lugar" th:field="*{lugar}" required/>
+                <br><br>
+                <label for="fechaE" th:text="#{cliente.entrada}">Fecha de entrada </label>
+                <input type="date" name="fechaE" th:field="*{fechaE}" required/>
+                <br><br>
+                <label for="fechaS" th:text="#{cliente.salida}">Fecha de salida </label>
+                <input type="date" name="fechaS" th:field="*{fechaS}" required/>
+                <br><br>
+                <input type="submit" name="guardar" th:value="#{accion.guardar2}" />
+                
+                </center>
             </form>
         </div>
+        <header th:replace="layout/plantilla :: headerEditar"></header> 
         <footer th:replace="layout/plantilla :: footer" />
     </body>
 </html>
